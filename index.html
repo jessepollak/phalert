@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Card — make your credit card better in one line of code</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="shortcut icon" href="src/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jessepollak/card/master/lib/css/card.css">
+    <link rel="stylesheet" href="build/css/demo.css">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-51659791-1', 'jessepollak.github.io');
+      ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <script type="text/javascript" src="//cdn.fusionads.net/fusion.js?zoneid=1332&serve=C6SDP2Y&placement=jessepollak" id="_fusionads_js"></script>
+    <div class="demo-wrapper">
+        <h6>
+            <span>fork on <a href="https://github.com/jessepollak/card" target="_blank">github</a></span>
+            <span class="right" href="#">built by <a href="http://twitter.com/jessepollak" target="_blank">@jessepollak</a></span>
+        </h6>
+        <div class="header">
+            <h1>Card
+                <iframe src="http://ghbtns.com/github-btn.html?user=jessepollak&repo=card&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20" style="margin-right:-25px;"></iframe>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-via="jessepollak">Tweet</a>
+            </h1>
+            <h6 class="subheader">Make your credit card form better in <b>one line of code</b>.</h6>
+        </div>
+
+        <div class="demo-container">
+            <h1>Before <small>(boring, painful)</small></h1>
+            <div class="form-container">
+                <form action="">
+                    <div class="row collapse">
+                        <div class="small-6 columns">
+                            <input placeholder="Card number" type="text" name="number">
+                        </div>
+                        <div class="small-6 columns">
+                            <input placeholder="Full name" type="text" name="name">
+                        </div>
+                    </div>
+                    <div class="row collapse">
+                        <div class="small-3 columns">
+                            <input placeholder="MM/YY" type="text" name="expiry">
+                        </div>
+
+                        <div class="small-3 columns">
+                            <input placeholder="CVC" type="text" name="cvc">
+                        </div>
+
+                        <div class="small-6 columns">
+                            <input type="submit" value="Submit" class="button postfix">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="code-container">
+            <h1>With one line of code..</h1>
+            <code class="javascript"> $('form').card({ container: $('.card-wrapper') }); </code>
+            <h1>You get..</h1>
+            <ul>
+                <li>Animations for 4 different card types</li>
+                <li>An intuitive experience for your users</li>
+                <li>Pure CSS, HTML, and Javascript (no images)</li>
+                <li>100% free and open source</li>
+            </ul>
+        </div>
+
+
+        <div class="demo-container">
+            <h1>After <small>(interactive, exciting)</small></h1>
+            <div class="card-wrapper"></div>
+
+            <div class="form-container active">
+                <form action="">
+                    <p class="small">Start typing in here to take over and try it out</p>
+                    <div class="row collapse">
+                        <div class="small-6 columns">
+                            <input placeholder="Card number" type="text" name="number">
+                        </div>
+                        <div class="small-6 columns">
+                            <input placeholder="Full name" type="text" name="name">
+                        </div>
+                    </div>
+                    <div class="row collapse">
+                        <div class="small-3 columns">
+                            <input placeholder="MM/YY" type="text" name="expiry">
+                        </div>
+
+                        <div class="small-3 columns">
+                            <input placeholder="CVC" type="text" name="cvc">
+                        </div>
+
+                        <div class="small-6 columns">
+                            <input type="submit" value="Submit" class="button postfix">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="explainer-container">
+            <h1>No need to change your form</h1>
+            <p>Card works as a drop in addition to your current credit card form. No need edit input names or HTML — you can leave everything as is.</p>
+            <h1>All pure CSS, HTML, and Javascript</h1>
+            <p>There are no images used. The credit cards and logos are all hand-coded with HTML and CSS.</p>
+            <h1>100% free and open source</h1>
+            <p>Feel free to use, modify, and distribute this library as much as you'd like under the <a href="https://github.com/jessepollak/card/blob/master/LICENSE.md">MIT license</a>.</p>
+            <h1>How do I use this?</h1>
+            <p>Visit the <a href="http://github.com/jessepollak/card">Github page</a> and follow the instructions to get started.</p>
+            <h1>Can I just use the CSS to style cards?</h1>
+            <p>Yes! Right now, card ships with pure-CSS cards for Mastercard, Visa, Discover, and American Express. You can see a demo usage <a href="http://jsbin.com/cinovupe/3/edit?html,output" target="_blank">here</a>.</p>
+            <h1>How do I contribute?</h1>
+            <p>You can contribute to the library on Github <a href="http://github.com/jessepollak/card">here</a>.</p>
+            <h1>Who made this?</h1>
+            <p>Jesse Pollak, follow him on Twitter <a href="http://twitter.com/jessepollak">here</a>.</p>
+        </div>
+        <a href="http://github.com/jessepollak/card" class="button success get-started">Get started</a>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js"></script>
+    <script src="build/js/demo.js"></script>
+    <script src="https://cdn.rawgit.com/jessepollak/card/master/lib/js/card.js"></script>
+    <script>
+        $('code').each(function(i, e) {hljs.highlightBlock(e)});
+        $('.active form').card({ container: $('.card-wrapper')})
+    </script>
+</body>
+</html>

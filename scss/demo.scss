@@ -1,0 +1,193 @@
+@import "../bower_components/foundation/scss/foundation";
+@import "highlight";
+
+$width: 350px;
+
+.demo-wrapper {
+    @media (max-width: 450px) {
+        width: 90%;
+        margin-left: 5%;
+        input {
+            display: block;
+            width: 98%;
+            border-right: 1px solid #ccc !important;
+        }
+        .row {
+            width: 90%;
+            .columns {
+                width: 100%;
+            }
+        }
+        .card-wrapper {
+            transform: scale(.7);
+            margin: 0;
+            // margin-left: -30px;
+        }
+        .demo-container {
+            .form-container {
+                margin-top: 20px;
+                width: 100%;
+                &.active {
+                    margin-top: 0;
+                }
+                p.small {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    width: 450px;
+    margin: 5px auto;
+    h1 {
+        margin: 0;
+    }
+
+    a {
+        color: #333;
+        font-weight: bold;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .header {
+        margin-top: 40px;
+    }
+
+    .code-container, .demo-container, .explainer-container {
+        padding: 10px;
+        margin: 10px 0;
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+
+    .demo-container {
+        background: #EEE;
+        position: relative;
+        h1 {
+            color: #333;
+        }
+    }
+
+    .code-container {
+        $green: #61AE24;
+        background: $green;
+        padding: 1px;
+        h1 {
+            margin: 10px;
+            color: white;
+        }
+        code {
+            padding: 30px 5px;
+            margin: 30px;
+            font-size: 12px;
+            text-align: center;
+            display: block;
+        }
+        ul {
+            padding: 10px 30px;
+            margin: 30px;
+            background: white;
+            li {
+                color: $green;
+                font-weight: bold;
+                line-height: 20px;
+                margin: 10px 0;
+                font-size: 15px;
+            }
+        }
+    }
+
+    .explainer-container {
+        padding: 20px 10px;
+        h1 {
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 15px;
+            line-height: 17px;
+        }
+    }
+
+    .get-started {
+        width: 100%;
+    }
+}
+
+.card-wrapper {
+    width: 100%;
+    margin: 30px auto;
+}
+
+.form-container {
+    width: $width;
+    margin: 30px auto;
+    margin-top: 40px;
+
+    label {
+        font-size: 12px;
+        text-transform: lowercase;
+        margin-bottom: 4px;
+    }
+
+    input {
+        box-shadow: none;
+        &[name="number"], &[name="expiry"] {
+            border-right: none;
+        }
+
+        &:focus {
+            box-shadow: none;
+            border-color: #BBB;
+        }
+    }
+}
+
+.active {
+    p.small {
+        font-size: 12px;
+        margin-bottom: 0;
+        color: #aaa;
+    }
+    input[name="number"] {
+
+    }
+}
+
+a.twitter-share-button {
+    font-size: 16px;
+    position: relative;
+    top: -4px;
+    left: 10px;
+}
+
+#fusionads {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 130px;
+    margin: 5px 10px;
+    .fusion-img {
+    }
+    .fusion-text {
+        font-size: 12px;
+        line-height: 16px;
+        color: #333;
+        display: block;
+        margin: 10px 0;
+    }
+    .fusion-poweredby {
+        margin: 0;
+        line-height: 100%;
+        font-size: 11px;
+        color: #aaa;
+        clear: both;
+        display: block;
+    }
+    @media (max-width: 800px) {
+      display: none;
+    }
+}
+
