@@ -98,7 +98,7 @@ findExternalDomains = (urls) ->
   new Promise (resolve, reject) ->
     promises = urls.map (obj) ->
       new Promise (resolve, reject) ->
-        request.head { uri: obj.external, timeout: 5000 }, (err, resp, body) ->
+        request.head { uri: obj.external, timeout: 25000 }, (err, resp, body) ->
           if err
             console.log "ERROR: #{err}"
             return resolve null
