@@ -69,7 +69,11 @@ getDomainMap =  ->
       for domain, numbers of snapshot.val()
         # unescape the domain names
         domain = domainFromKey domain
-        domainMap[domain] = (obj.number for key, obj of numbers)
+
+        # trim out any bad domains that aren't of the form test.com
+        if domain.match /^([A-Za-z0-9_]+\.)+([a-z])+$/
+          domainMap[domain] = (obj.number for key, obj of numbers)
+
       resolve(domainMap)
 
 # send a text to an array of numbers for a given domain
@@ -77,17 +81,24 @@ sendText = (result, domain, numbers) ->
   numbers = [numbers] if typeof(numbers) == "string"
   promises = []
   for number in numbers
-    debug "[send] #{number}, #{domain}"
     promises.push(new Promise (resolve, reject) ->
-      resolve()
-      twilio.messages.create
-        from: '+12407884901'
-        to: number
-        body: "Your domain #{domain} has been mentioned on Product Hunt.
-              Read more here: #{result.comments}."
-      , (err, message) ->
-        resolve()
+      twilio.messages.create(
+        {
+          from: '+12407884901',
+          to: number,
+          body: "Your domain #{domain} has been mentioned on Product Hunt.
+                Read more here: #{result.comments}."
+        },
+        (err, message) ->
+          if err
+            debug "[not sent] #{number}, #{domain}, #{err.message}"
+          else
+            debug "[sent] #{number}, #{domain}"
+
+          resolve()
+      )
     )
+
   promises
 
 # the links to the actual products on the home page are hidden
