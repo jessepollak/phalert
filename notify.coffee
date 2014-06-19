@@ -159,9 +159,10 @@ processMatches = (results) ->
         .then(resolve)
 
 run = (cb) ->
-  getAllMatches()
-    .then processMatches
-    .then cb
+  firebase.auth process.env.FIREBASE_SECRET, ->
+    getAllMatches()
+      .then processMatches
+      .then cb
 
 run ->
   process.exit()
