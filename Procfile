@@ -1,1 +1,1 @@
-notify: DEBUG=notify coffee notify.coffee
+notify: coffee notify.coffee
