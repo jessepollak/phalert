@@ -170,10 +170,15 @@ processMatches = (results) ->
         .then(resolve)
 
 run = (cb) ->
+  start = new Date()
+  debug "[BEGIN] run of notify at #{start}"
   firebase.auth process.env.FIREBASE_SECRET, ->
     getAllMatches()
       .then processMatches
-      .then cb
+      .then ->
+        end = new Date()
+        debug "[END] run of notify at #{end} (#{(end - start) / 1000}s)"
+        cb()
 
 run ->
   process.exit()
