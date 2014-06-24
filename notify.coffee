@@ -84,7 +84,7 @@ sendText = (result, domain, numbers) ->
     promises.push(new Promise (resolve, reject) ->
       twilio.messages.create(
         {
-          from: '+12407884901',
+          from: process.env.TWILIO_NUMBER,
           to: number,
           body: "Your domain #{domain} has been mentioned on Product Hunt.
                 Read more here: #{result.comments}."
