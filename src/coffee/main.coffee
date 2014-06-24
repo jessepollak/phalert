@@ -5,14 +5,13 @@ FIREBASE_URL = 'https://phnotifier.firebaseio.com/'
 DOMAINS_KEY = 'domains'
 submitting = false
 
-window.firebase = firebase = new Firebase FIREBASE_URL
-domainRef = firebase.child DOMAINS_KEY
-
 domainToKey = (domain) ->
   domain.replace /\./g, '-'
 submit = (e) ->
   e.preventDefault()
   return if submitting
+  firebase = new Firebase FIREBASE_URL
+  domainRef = firebase.child DOMAINS_KEY
   submitting = true
   domain = $('input[name="domain"]').val()
   number = $('input[name="number"]').val()
