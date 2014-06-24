@@ -1,4 +1,4 @@
-request = require 'request'
+request = require('request').defaults jar: true
 $ = require 'cheerio'
 through = require 'through2'
 Promise = require 'bluebird'
@@ -165,6 +165,7 @@ processMatches = (results) ->
 
       # once all text messages are sent we can store all the numbers
       # that were texted and resolve
+      debug "Sending #{textMessagesSent.length} messages"
       Promise.all(textMessagesSent)
         .then(setSentMap.bind(null, sent))
         .then(resolve)
