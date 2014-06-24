@@ -11,6 +11,7 @@ gulpif = require 'gulp-if'
 uglify = require 'gulp-uglify'
 minify = require 'gulp-minify-css'
 connect = require 'gulp-connect'
+open = require 'gulp-open'
 
 production = process.env.NODE_ENV == 'production'
 transforms = ['coffeeify']
@@ -37,6 +38,9 @@ gulp.task 'watch', ['connect'],  ->
   server.listen 35729, ->
     gulp.watch './src/scss/**/*.scss', ['scss']
     gulp.watch './src/coffee/**/*.coffee', ['browserify']
+
+    gulp.src('index.html')
+      .pipe open("", url: "http://localhost:8080/")
 
 gulp.task 'connect', ->
   connect.server()
