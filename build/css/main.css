@@ -1,0 +1,87 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+body {
+  background: #FFFFE3;
+  font-family: "Montserrat", "Helvetica", sans-serif; }
+  body * {
+    font-family: inherit; }
+
+.container {
+  width: 600px;
+  margin: auto;
+  padding: 30px; }
+
+.header {
+  text-align: center;
+  margin-top: 50px; }
+  .header .logo {
+    position: relative;
+    width: 150px;
+    margin: 30px auto; }
+    .header .logo:before {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      width: 50px;
+      height: 50px;
+      display: block;
+      content: "1";
+      background: #DA552F;
+      border-radius: 25px;
+      line-height: 50px;
+      color: #fff;
+      font-size: 30px;
+      font-weight: bold; }
+  .header h1, .header h2 {
+    color: #777;
+    margin: 5px 0; }
+    .header h1 .highlight, .header h2 .highlight {
+      color: #DA552F; }
+  .header h2 {
+    font-size: 18px;
+    font-weight: normal; }
+
+.form {
+  margin-top: 30px;
+  text-align: center; }
+  .form input {
+    border: 0;
+    font-size: 14px;
+    padding: 7px;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    color: #777; }
+    .form input:focus {
+      outline: 0;
+      border-color: #DA552F; }
+    .form input.valid {
+      border-color: #54AB7D; }
+    .form input[type="submit"] {
+      font-weight: bold;
+      padding: 7px 14px;
+      border: 2px solid #DA552F;
+      background: #da552f;
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer; }
+      .form input[type="submit"][disabled="disabled"] {
+        background: #ddd;
+        border-color: #ddd; }
+      .form input[type="submit"]:hover:not([disabled="disabled"]) {
+        border-color: #b8330d;
+        -webkit-box-shadow: 0px 0px 8px #da552f;
+        box-shadow: 0px 0px 8px #da552f; }
+  .form .success-message, .form .error-message {
+    color: #777;
+    font-size: 14px;
+    opacity: 0; }
+
+.footer {
+  text-align: center;
+  color: #777;
+  font-size: 12px; }
+  .footer a {
+    color: #5e5e5e; }
