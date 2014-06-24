@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-$background-color: #FFFFE3;
-$primary-color: #777;
+$background-color: #FFFFFF;
+$primary-color: #333;
 $highlight-color: #DA552F;
 $success-color: #54AB7D;
 
@@ -48,7 +48,7 @@ body {
         }
     }
 
-    h1, h2 {
+    h1, h2, h3 {
         color: $primary-color;
         margin: 5px 0;
         .highlight {
@@ -56,9 +56,17 @@ body {
         }
     }
 
+    h2, h3 {
+       color: lighten($primary-color, 10%);
+       font-weight: normal;
+    }
+
     h2 {
         font-size: 18px;
-        font-weight: normal;
+    }
+
+    h3 {
+        font-size: 12px;
     }
 }
 

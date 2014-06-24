@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 body {
-  background: #FFFFE3;
+  background: #FFFFFF;
   font-family: "Montserrat", "Helvetica", sans-serif; }
   body * {
     font-family: inherit; }
@@ -31,14 +31,18 @@ body {
       color: #fff;
       font-size: 30px;
       font-weight: bold; }
-  .header h1, .header h2 {
-    color: #777;
+  .header h1, .header h2, .header h3 {
+    color: #333;
     margin: 5px 0; }
-    .header h1 .highlight, .header h2 .highlight {
+    .header h1 .highlight, .header h2 .highlight, .header h3 .highlight {
       color: #DA552F; }
-  .header h2 {
-    font-size: 18px;
+  .header h2, .header h3 {
+    color: #4d4d4d;
     font-weight: normal; }
+  .header h2 {
+    font-size: 18px; }
+  .header h3 {
+    font-size: 12px; }
 
 .form {
   margin-top: 30px;
@@ -53,7 +57,7 @@ body {
     -webkit-appearance: none;
     -webkit-transition: all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
-    color: #777; }
+    color: #333; }
     .form input:focus {
       outline: 0;
       border-color: #DA552F; }
@@ -75,13 +79,13 @@ body {
         -webkit-box-shadow: 0px 0px 8px #da552f;
         box-shadow: 0px 0px 8px #da552f; }
   .form .success-message, .form .error-message {
-    color: #777;
+    color: #333;
     font-size: 14px;
     opacity: 0; }
 
 .footer {
   text-align: center;
-  color: #777;
+  color: #333;
   font-size: 12px; }
   .footer a {
-    color: #5e5e5e; }
+    color: #1a1a1a; }
