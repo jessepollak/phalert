@@ -14,7 +14,7 @@ submit = (e) ->
   domainRef = firebase.child DOMAINS_KEY
   submitting = true
   domain = $('input[name="domain"]').val()
-  number = $('input[name="number"]').val()
+  number = formatE164('US', $('input[name="number"]').val())
   $('.success-message, .error-message').css opacity: 0
   domainRef.child(domainToKey(domain)).push number: number, submitCallback
 submitCallback = (err) ->
