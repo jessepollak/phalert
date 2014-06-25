@@ -87,7 +87,7 @@ sendText = (result, domain, numbers) ->
           from: process.env.TWILIO_NUMBER,
           to: number,
           body: "Your domain #{domain} has been mentioned on Product Hunt.
-                Read more here: #{result.comments}."
+                Read more here: #{result.comments}"
         },
         (err, message) ->
           if err
