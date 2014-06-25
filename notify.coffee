@@ -146,7 +146,7 @@ processMatches = (results) ->
       sent = sent or {}
       for domain, numbers of domains
         for result in results
-          if result?.external.match(domain)
+          if result?.external.match(new Regexp(domain, 'gi'))
 
             # only send text messages to numbers that haven't already
             # been texted to for the given domain
