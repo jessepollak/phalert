@@ -67,8 +67,7 @@ body {
 
     h3 {
         font-size: 12px;
-    }
-}
+    }}
 
 .form {
     margin-top: 30px;
@@ -128,4 +127,9 @@ body {
     a {
         color: darken($primary-color, 10%);
     }
+
+    .social {
+        margin: 10px 0 20px 0;
+    }
+
 }
