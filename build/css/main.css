@@ -3,7 +3,10 @@ body {
   background: #FFFFFF;
   font-family: "Montserrat", "Helvetica", sans-serif; }
   body * {
-    font-family: inherit; }
+    font-family: inherit;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
 
 .container {
   width: 600px;
@@ -91,3 +94,11 @@ body {
     color: #1a1a1a; }
   .footer .social {
     margin: 10px 0 20px 0; }
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 0; }
+  .form input {
+    display: block;
+    width: 100%; } }

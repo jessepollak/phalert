@@ -10,6 +10,7 @@ body {
     font-family: "Montserrat", "Helvetica", sans-serif;
     * {
         font-family: inherit;
+        box-sizing: border-box;
     }
 }
 
@@ -132,4 +133,18 @@ body {
         margin: 10px 0 20px 0;
     }
 
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .form {
+        input {
+            display: block;
+            width: 100%;
+        }
+    }
 }
