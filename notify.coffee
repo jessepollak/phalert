@@ -3,6 +3,7 @@ $ = require 'cheerio'
 through = require 'through2'
 Promise = require 'bluebird'
 debug = require('debug')('notify')
+tz = require('timezone')(require("timezone/America"))
 Firebase = require 'firebase'
 
 # try to load environment variables from a .env file, but ignore
@@ -30,8 +31,7 @@ domainFromKey = (key) ->
 
 # turn a Date into the format MM-DD-YYYY
 todayToKey = ->
-  date = new Date()
-  [date.getMonth(), date.getDay(), date.getFullYear()].join('-')
+  tz(new Date(), "America/Los_Angeles", "%m-%d-%Y")
 
 # we do a full set for the mapping of domain -> numbers that have
 # already been sent to for the day
