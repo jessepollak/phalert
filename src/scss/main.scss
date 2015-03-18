@@ -28,6 +28,9 @@ body {
         position: relative;
         width: 150px;
         margin: 30px auto;
+        img {
+            width: 100%;
+        }
         &:before {
             $size: 50px;
 

@@ -20,6 +20,8 @@ body {
     position: relative;
     width: 150px;
     margin: 30px auto; }
+    .header .logo img {
+      width: 100%; }
     .header .logo:before {
       position: absolute;
       top: -10px;
